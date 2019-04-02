@@ -14,12 +14,5 @@
         "psr-4": {
             "Submtd\\LaravelClickatellNotification\\": "src/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Submtd\\LaravelClickatellNotification\\Providers\\LaravelClickatellNotificationServiceProvider"
-            ]
-        }
     }
 }
