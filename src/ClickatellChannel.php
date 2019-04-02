@@ -45,17 +45,14 @@ class ClickatellChannel
             return;
         }
         $message = $notification->toClickatell($notifiable);
-        if (is_string($message)) {
-            $message = ClickatellMessage::create($message);
-        }
         $messageParameters = [
             'to' => [$to],
-            'content' => $message->getContent(),
+            'content' => $message,
         ];
         if ($this->from) {
             $messageParameters['from'] = $this->from;
         }
         $clickatellApi = new Rest($this->token);
-        $clickatellApi->send($messageParameters);
+        $clickatellApi->sendMessage($messageParameters);
     }
 }
