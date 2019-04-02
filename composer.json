@@ -1,0 +1,25 @@
+{
+    "name": "submtd/laravel-clickatell-notification",
+    "description": "Laravel Clickatell notification channel",
+    "authors": [
+        {
+            "name": "Steve Harmeyer",
+            "email": "harmeyersteve@gmail.com"
+        }
+    ],
+    "require": {
+        "arcturial/clickatell": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Submtd\\LaravelClickatellNotification\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Submtd\\LaravelClickatellNotification\\Providers\\LaravelClickatellNotificationServiceProvider"
+            ]
+        }
+    }
+}
